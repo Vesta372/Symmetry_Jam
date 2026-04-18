@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SymmetryJamProject"
 run/main_scene="res://l_1.tscn"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [display]

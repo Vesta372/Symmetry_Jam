@@ -17,11 +17,7 @@ var gravity = 0.1
 
 var max_velocity = Vector2 (500,500)
 
-func _physics_process(delta: float) -> void:
-	if mirror <0:
-		animated_sprite.flip_h = true
-	else:
-		animated_sprite.flip_h = false
+func walking_controller(delta):
 	if Input.is_action_pressed("move_left"):
 		direction.x = -1
 		animated_sprite.play("walking_left")
@@ -31,18 +27,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		direction.x = 0
 		animated_sprite.play("default")
-	
-	if Input.is_action_just_pressed("move_up") && can_jump:
-		jump()
-	
+
+func jumping_controller():
 	if !is_on_floor():
-		is_jumping = true
-		if jumped_once:
-			can_jump = false
-			print("ASS")
-		else: 
-			print("tits")
-			jumped_once = true
 		
 		if direction.y < max_velocity.y:
 			direction.y += gravity
@@ -51,6 +38,29 @@ func _physics_process(delta: float) -> void:
 		can_jump = true
 		jumped_once = false
 		jump_timer = time
+	
+	if is_on_ceiling():
+		direction.y = 0
+		direction.y += gravity
+	
+	if Input.is_action_just_pressed("move_up") && can_jump:
+		print(jumped_once)
+		if jumped_once:
+			jump()
+			can_jump = false
+		else:
+			jump()
+			jumped_once = true
+
+
+func _physics_process(delta: float) -> void:
+	if mirror <0:
+		animated_sprite.flip_h = true
+	else:
+		animated_sprite.flip_h = false
+	
+	walking_controller(delta)
+	jumping_controller()
 	
 	direction.x *= mirror
 	
