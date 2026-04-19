@@ -122,18 +122,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_puebb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5mjeo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_puebb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5mjeo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_puebb")
 }],
 "loop": false,
 "name": &"kiss_right",

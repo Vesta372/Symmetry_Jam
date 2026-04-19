@@ -1,21 +1,22 @@
-[gd_scene format=3 uid="uid://bnkhth2pbwhha"]
+[gd_scene format=3 uid="uid://b06ng3tu4woth"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="SpriteFrames" path="res://White.tres" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dcail0q7ueuwc" path="res://scripts/player.gd" id="1_c08b3"]
+[ext_resource type="SpriteFrames" uid="uid://dhij0845ykndv" path="res://Animation/White.tres" id="2_agjl5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 5.0
 height = 12.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 6.0
+radius = 7.0
 height = 14.0
 
 [node name="Player" type="CharacterBody2D" unique_id=945696397]
-script = ExtResource("1_onrkg")
+script = ExtResource("1_c08b3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=730381296]
-sprite_frames = ExtResource("2_onrkg")
+sprite_frames = ExtResource("2_agjl5")
+animation = &"kiss_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1058844087]
 shape = SubResource("CapsuleShape2D_i3pqv")
@@ -25,4 +26,5 @@ shape = SubResource("CapsuleShape2D_i3pqv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection" unique_id=1104058131]
 shape = SubResource("CapsuleShape2D_onrkg")
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]

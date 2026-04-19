@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://c2v2sa22dmmql"]
+[gd_scene format=4 uid="uid://damqu016mxw2m"]
 
 [ext_resource type="TileSet" uid="uid://ruo6xmb2k31f" path="res://GameTileSet.tres" id="1_kd43s"]
-[ext_resource type="PackedScene" uid="uid://bnkhth2pbwhha" path="res://player.tscn" id="2_1wlhj"]
+[ext_resource type="PackedScene" uid="uid://b06ng3tu4woth" path="res://player.tscn" id="2_1wlhj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1iceb"]
 normal = Vector2(-0.9999087, 0.013512279)
@@ -23,14 +23,14 @@ tile_set = ExtResource("1_kd43s")
 
 [node name="Player" parent="." unique_id=2052708783 instance=ExtResource("2_1wlhj")]
 position = Vector2(96, 135)
-mirror = 1
+script = null
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=905337608]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Player2" parent="." unique_id=1817136276 instance=ExtResource("2_1wlhj")]
 position = Vector2(225, 136)
-mirror = -1
+script = null
 
 [node name="AnimatedSprite2D" parent="Player2" index="0" unique_id=730381296]
 sprite_frames = null
