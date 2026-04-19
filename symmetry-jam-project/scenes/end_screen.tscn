@@ -1,30 +1,40 @@
 [gd_scene format=3 uid="uid://c5j4julenj16f"]
 
 [ext_resource type="Script" uid="uid://vjihryei6ly" path="res://scripts/end_screen.gd" id="1_6e1uj"]
-[ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="2_jc7ji"]
+[ext_resource type="Texture2D" uid="uid://v4jljk3j23o0" path="res://Assets/Love_wins.png" id="2_6e1uj"]
 
 [node name="end_screen" type="Node2D" unique_id=1289486552]
 script = ExtResource("1_6e1uj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1038644499]
-position = Vector2(153, 75.5)
-scale = Vector2(2.421875, 1.2109375)
-texture = ExtResource("2_jc7ji")
+position = Vector2(160, 80)
+texture = ExtResource("2_6e1uj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=852436548]
-offset_left = 36.0
-offset_top = 9.0
-offset_right = 274.0
-offset_bottom = 49.0
+offset_left = 38.0
+offset_top = -6.0
+offset_right = 276.0
+offset_bottom = 34.0
+theme_override_colors/default_color = Color(0.11858138, 0.11858138, 0.11858138, 1)
+theme_override_font_sizes/normal_font_size = 22
 text = "LOVE WINS"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=683311907]
-offset_left = 109.0
-offset_top = 123.0
-offset_right = 199.0
-offset_bottom = 144.0
+offset_left = 110.0
+offset_top = 131.0
+offset_right = 200.0
+offset_bottom = 152.0
 theme_override_font_sizes/font_size = 8
 text = "PLAY AGAIN?"
+
+[node name="Label" type="Label" parent="." unique_id=1921641897]
+offset_left = 137.0
+offset_top = 150.0
+offset_right = 236.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
+text = "press enter"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

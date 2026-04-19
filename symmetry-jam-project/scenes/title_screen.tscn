@@ -1,21 +1,31 @@
 [gd_scene format=3 uid="uid://dkpjuwauv28ai"]
 
 [ext_resource type="Script" uid="uid://bc68nv1sb6ldf" path="res://scripts/title_screen.gd" id="1_sa3yf"]
-[ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="2_s4lrb"]
+[ext_resource type="Texture2D" uid="uid://cwkems8qe38jj" path="res://Assets/help.png" id="2_sa3yf"]
 
 [node name="title_screen" type="Node2D" unique_id=1225894361]
 script = ExtResource("1_sa3yf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1799774626]
-position = Vector2(170.5, 85.5)
-scale = Vector2(2.6328125, 1.3828125)
-texture = ExtResource("2_s4lrb")
+position = Vector2(160, 81)
+texture = ExtResource("2_sa3yf")
 
 [node name="Button" type="Button" parent="." unique_id=420661555]
-offset_left = 110.0
-offset_top = 132.0
-offset_right = 227.0
-offset_bottom = 164.0
-text = "Start"
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 217.0
+offset_bottom = 56.0
+text = "Start
+"
+
+[node name="Label" type="Label" parent="Button" unique_id=1546706558]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 33.0
+offset_right = 141.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
+text = "press enter"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

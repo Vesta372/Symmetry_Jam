@@ -10,7 +10,6 @@ func _physics_process(delta: float) -> void:
 		return
 	if cam != null:
 		if cam.position.y < get_viewport_rect().size.y/2:
-			print(cam.position.y)
 			position.y = cam.position.y - get_viewport_rect().size.y/2
 	else:
 		print("getting cam failed")
