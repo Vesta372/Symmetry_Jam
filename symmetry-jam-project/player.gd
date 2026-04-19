@@ -3,16 +3,24 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 @export var mirror : int
+@export var next_level : int
 
 var kiss = 0
 var speed = 50
 var direction = Vector2 (0,0)
+
 
 var can_jump = true
 var is_jumping = false
 var time = 10 * 60
 var jump_timer = time
 var jumped_once = false
+var disabled
+
+var level_2 = "res://l_2.tscn"
+var level_3 = "res://l_3.tscn"
+var level_end = "res://end_screen.tscn"
+var change_lev = false
 
 var gravity = 0.1
 
@@ -60,13 +68,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.flip_h = false
 	
-	walking_controller(delta)
-	jumping_controller()
+	if !disabled:
+		walking_controller(delta)
+		jumping_controller()
 	
-	direction.x *= mirror
+		direction.x *= mirror
 	
-	self.velocity = speed * direction
-	self.move_and_slide()
+		self.velocity = speed * direction
+		self.move_and_slide()
+	
+	if change_lev == true:
+		change_level()
 
 func jump():
 	if jump_timer <= 0:
@@ -75,7 +87,15 @@ func jump():
 		jump_timer -= 1
 	direction.y = -3
 
-
+func change_level():
+	if next_level != null:
+		if next_level == 2:
+			get_tree().change_scene_to_file(level_2)
+		elif next_level == 3:
+			get_tree().change_scene_to_file(level_3)
+		elif next_level == 4:
+			get_tree().change_scene_to_file(level_end)
+			
 
 
 func _on_detection_body_entered(body: Node2D) -> void:
@@ -84,5 +104,4 @@ func _on_detection_body_entered(body: Node2D) -> void:
 		print("kiss ", kiss)
 		if kiss >= 2:
 			#play animation
-			#switch level
-			pass
+			change_lev = true
