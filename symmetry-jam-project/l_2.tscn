@@ -2,12 +2,16 @@
 
 [ext_resource type="TileSet" uid="uid://c4t8cpsyhaxbm" path="res://GameTileSet.tres" id="1_wjke4"]
 [ext_resource type="PackedScene" uid="uid://dxrnde668e0ui" path="res://player.tscn" id="2_2vdi0"]
+[ext_resource type="Texture2D" uid="uid://c87lsaxrav7ly" path="res://Assets/Water.png" id="3_oaxfk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2vdi0"]
 normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oaxfk"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghjnf"]
+size = Vector2(4, 451)
 
 [node name="L_2" type="Node2D" unique_id=546796296]
 
@@ -48,5 +52,18 @@ limit_left = 0
 limit_top = -1000
 limit_right = 320
 limit_bottom = 160
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=435865638]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=686013009]
+position = Vector2(160, -65.5)
+shape = SubResource("RectangleShape2D_ghjnf")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=587258867]
+position = Vector2(160.25, -57.75)
+scale = Vector2(0.9, 464.50003)
+texture = ExtResource("3_oaxfk")
+region_enabled = true
+region_rect = Rect2(15, 5, 5, 1)
 
 [editable path="Player2"]
