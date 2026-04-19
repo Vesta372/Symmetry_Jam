@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bsg7qjblsc8gy"]
+[gd_scene format=4 uid="uid://djbttu1bg07md"]
 
 [ext_resource type="TileSet" uid="uid://c4t8cpsyhaxbm" path="res://GameTileSet.tres" id="1_rykd7"]
 [ext_resource type="PackedScene" uid="uid://dxrnde668e0ui" path="res://player.tscn" id="2_lg7h0"]
@@ -18,18 +18,18 @@ tile_map_data = PackedByteArray("AAAAAPb/AAAAAAAAAAAAAPf/AAAAAAAAAAAAAPj/AAAAAAA
 tile_set = ExtResource("1_rykd7")
 
 [node name="Grass" type="TileMapLayer" parent="." unique_id=1423416942]
-tile_map_data = PackedByteArray("AAAAAAkAAQAAAAMAAAABAAkAAQABAAMAAAACAAkAAQABAAMAAAADAAkAAQABAAMAAAAEAAkAAQABAAMAAAAFAAkAAQABAAMAAAAGAAkAAQABAAMAAAAHAAkAAQABAAMAAAAIAAkAAQABAAMAAAAJAAkAAQABAAMAAAAKAAkAAQABAAMAAAALAAkAAQABAAMAAAAMAAkAAQABAAMAAAANAAkAAQABAAMAAAAOAAkAAQABAAMAAAAPAAkAAQABAAMAAAAQAAkAAQABAAMAAAARAAkAAQABAAMAAAASAAkAAQABAAMAAAATAAkAAQACAAMAAAACAAcAAQAAAAMAAAADAAcAAQACAAMAAAAFAAYAAQAAAAMAAAAGAAYAAQACAAMAAAAIAAUAAQAAAAMAAAAJAAUAAQACAAMAAAALAAYAAQAAAAMAAAAMAAYAAQABAAMAAAANAAYAAQACAAMAAAAPAAcAAQAAAAMAAAAQAAcAAQACAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAAkAAQAAAAMAAAABAAkAAQABAAMAAAACAAkAAQABAAMAAAADAAkAAQABAAMAAAAEAAkAAQABAAMAAAAFAAkAAQABAAMAAAAGAAkAAQABAAMAAAAHAAkAAQABAAMAAAAIAAkAAQACAAMAAAALAAkAAQAAAAMAAAAMAAkAAQABAAMAAAANAAkAAQABAAMAAAAOAAkAAQABAAMAAAAPAAkAAQABAAMAAAAQAAkAAQABAAMAAAARAAkAAQABAAMAAAASAAkAAQABAAMAAAATAAkAAQACAAMAAAA=")
 tile_set = ExtResource("1_rykd7")
 
 [node name="Player" parent="." unique_id=1969224088 instance=ExtResource("2_lg7h0")]
-position = Vector2(144, 134)
+position = Vector2(132, 138)
 mirror = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=50336157]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Player2" parent="." unique_id=440763599 instance=ExtResource("2_lg7h0")]
-position = Vector2(225, 136)
+position = Vector2(188, 138)
 mirror = -1
 
 [node name="world_boundary" type="StaticBody2D" parent="." unique_id=394869686]
@@ -45,7 +45,7 @@ position = Vector2(-18, 236)
 shape = SubResource("WorldBoundaryShape2D_1wlhj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=68139473]
-position = Vector2(144, 134)
+position = Vector2(132, 138)
 limit_left = 0
 limit_top = -1000
 limit_right = 320
