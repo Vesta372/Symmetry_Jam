@@ -1,6 +1,6 @@
 extends Node2D
 
-var title = "res://title_screen.tscn"
+var title = "res://scenes/title_screen.tscn"
 
 
 

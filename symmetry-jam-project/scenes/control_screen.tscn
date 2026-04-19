@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0b68oq2dpc10"]
 
-[ext_resource type="Script" uid="uid://dqyv0rqyv4xkb" path="res://control_screen.gd" id="1_j7x1b"]
+[ext_resource type="Script" uid="uid://dqyv0rqyv4xkb" path="res://scripts/control_screen.gd" id="1_j7x1b"]
 [ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="1_lcjju"]
 
 [node name="control_screen" type="Node2D" unique_id=1252563565]

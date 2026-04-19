@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+
 @onready var animated_sprite = $AnimatedSprite2D
 
+@export var sf : SpriteFrames
 @export var mirror : int
 @export var next_level : int
 
@@ -17,14 +19,18 @@ var jump_timer = time
 var jumped_once = false
 var disabled
 
-var level_2 = "res://l_2.tscn"
-var level_3 = "res://l_3.tscn"
-var level_end = "res://end_screen.tscn"
+var level_2 = "res://scenes/l_2.tscn"
+var level_3 = "res://scenes/l_3.tscn"
+var level_end = "res://scenes/end_screen.tscn"
 var change_lev = false
 
 var gravity = 0.1
 
 var max_velocity = Vector2 (500,500)
+
+func _ready() -> void:
+	animated_sprite.sprite_frames = sf
+
 
 func walking_controller(delta):
 	if Input.is_action_pressed("move_left"):

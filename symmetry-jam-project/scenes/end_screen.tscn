@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c5j4julenj16f"]
 
-[ext_resource type="Script" uid="uid://vjihryei6ly" path="res://end_screen.gd" id="1_abjgy"]
-[ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="1_my301"]
+[ext_resource type="Script" uid="uid://vjihryei6ly" path="res://scripts/end_screen.gd" id="1_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="2_jc7ji"]
 
 [node name="end_screen" type="Node2D" unique_id=1289486552]
-script = ExtResource("1_abjgy")
+script = ExtResource("1_6e1uj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1038644499]
 position = Vector2(153, 75.5)
 scale = Vector2(2.421875, 1.2109375)
-texture = ExtResource("1_my301")
+texture = ExtResource("2_jc7ji")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=852436548]
 offset_left = 36.0

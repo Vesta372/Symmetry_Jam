@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxrnde668e0ui"]
 
-[ext_resource type="Script" uid="uid://dcail0q7ueuwc" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="SpriteFrames" uid="uid://cm45nk2b0xncj" path="res://White.tres" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dcail0q7ueuwc" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="SpriteFrames" uid="uid://dhij0845ykndv" path="res://Animation/White.tres" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 5.0
