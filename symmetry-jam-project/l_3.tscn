@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://c4t8cpsyhaxbm" path="res://GameTileSet.tres" id="1_rykd7"]
 [ext_resource type="PackedScene" uid="uid://dxrnde668e0ui" path="res://player.tscn" id="2_lg7h0"]
+[ext_resource type="SpriteFrames" uid="uid://bi6lnb763jroy" path="res://Brown.tres" id="3_lg7h0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1iceb"]
 normal = Vector2(-1, 0)
@@ -36,6 +37,9 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2(315, 138)
 mirror = -1
 
+[node name="AnimatedSprite2D" parent="Player2" index="0" unique_id=730381296]
+sprite_frames = ExtResource("3_lg7h0")
+
 [node name="world_boundary" type="StaticBody2D" parent="." unique_id=394869686]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world_boundary" unique_id=1641588663]
@@ -54,3 +58,5 @@ limit_left = 0
 limit_top = -1000
 limit_right = 320
 limit_bottom = 160
+
+[editable path="Player2"]
