@@ -1,20 +1,19 @@
 [gd_scene format=3 uid="uid://0b68oq2dpc10"]
 
 [ext_resource type="Script" uid="uid://dqyv0rqyv4xkb" path="res://scripts/control_screen.gd" id="1_j7x1b"]
-[ext_resource type="Texture2D" uid="uid://cveo68hy1ba58" path="res://Assets/icon.svg" id="1_lcjju"]
+[ext_resource type="Texture2D" uid="uid://cwkems8qe38jj" path="res://Assets/help.png" id="2_b2wnj"]
 
 [node name="control_screen" type="Node2D" unique_id=1252563565]
 script = ExtResource("1_j7x1b")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1373178421]
-position = Vector2(156.5, 78.5)
-scale = Vector2(2.5078125, 1.2421875)
-texture = ExtResource("1_lcjju")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=717477564]
+position = Vector2(160, 81)
+texture = ExtResource("2_b2wnj")
 
 [node name="Panel" type="Panel" parent="." unique_id=764025674]
-offset_left = 21.0
+offset_left = 26.0
 offset_top = 15.0
-offset_right = 291.0
+offset_right = 296.0
 offset_bottom = 110.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1402624070]
@@ -31,10 +30,20 @@ Press Enter to look here again"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=711087416]
-offset_left = 113.0
-offset_top = 120.0
-offset_right = 193.0
-offset_bottom = 144.0
+offset_left = 119.0
+offset_top = 116.0
+offset_right = 199.0
+offset_bottom = 147.0
 text = "Play"
+
+[node name="Label" type="Label" parent="Button" unique_id=872863650]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
+text = "press enter"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

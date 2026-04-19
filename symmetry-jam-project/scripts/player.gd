@@ -10,6 +10,7 @@ extends CharacterBody2D
 var kiss = 0
 var speed = 50
 var direction = Vector2 (0,0)
+var kissing = false
 
 
 var can_jump = true
@@ -59,7 +60,6 @@ func jumping_controller():
 		direction.y += gravity
 	
 	if Input.is_action_just_pressed("move_up") && can_jump:
-		print(jumped_once)
 		if jumped_once:
 			jump()
 			can_jump = false
@@ -82,6 +82,14 @@ func _physics_process(delta: float) -> void:
 	
 		self.velocity = speed * direction
 		self.move_and_slide()
+	else:
+		if kissing:
+			if !is_on_floor():
+				if direction.y < max_velocity.y:
+					direction.y += gravity
+				self.velocity = speed * direction
+				self.move_and_slide()
+	
 	
 	if change_lev == true:
 		change_level()
@@ -109,5 +117,18 @@ func _on_detection_body_entered(body: Node2D) -> void:
 		kiss += 1
 		print("kiss ", kiss)
 		if kiss >= 2:
-			#play animation
-			change_lev = true
+			disabled = true
+			kissing = true
+			if direction.x * mirror < 0:
+				animated_sprite.play("kiss_left")
+				print("aaa")
+			else:
+				animated_sprite.play("kiss_right")
+				print("bb")
+			
+
+
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	change_lev = true
