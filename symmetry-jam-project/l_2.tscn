@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=4 uid="uid://cxy14opscti1n"]
+[gd_scene format=4 uid="uid://cxy14opscti1n"]
 
 [ext_resource type="TileSet" uid="uid://c4t8cpsyhaxbm" path="res://GameTileSet.tres" id="1_wjke4"]
 [ext_resource type="PackedScene" uid="uid://dxrnde668e0ui" path="res://player.tscn" id="2_2vdi0"]
