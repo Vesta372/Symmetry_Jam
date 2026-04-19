@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chm8tuswvbuf8"
-path="res://.godot/imported/Basic Charakter Spritesheet.png-a54ceb53fc76936fa12d958d3d75f013.ctex"
+uid="uid://4s2c32txw7mj"
+path="res://.godot/imported/Fences.png-486c98fa790688db1039fbc15f17e1f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Basic Charakter Spritesheet.png"
-dest_files=["res://.godot/imported/Basic Charakter Spritesheet.png-a54ceb53fc76936fa12d958d3d75f013.ctex"]
+source_file="res://Assets/Fences.png"
+dest_files=["res://.godot/imported/Fences.png-486c98fa790688db1039fbc15f17e1f3.ctex"]
 
 [params]
 
