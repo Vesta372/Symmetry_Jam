@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://ruo6xmb2k31f" path="res://GameTileSet.tres" id="1_kd43s"]
 [ext_resource type="PackedScene" uid="uid://bnkhth2pbwhha" path="res://player.tscn" id="2_1wlhj"]
-[ext_resource type="SpriteFrames" path="res://Brown.tres" id="3_1iceb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1iceb"]
 normal = Vector2(-0.9999087, 0.013512279)
@@ -34,7 +33,7 @@ position = Vector2(225, 136)
 mirror = -1
 
 [node name="AnimatedSprite2D" parent="Player2" index="0" unique_id=730381296]
-sprite_frames = ExtResource("3_1iceb")
+sprite_frames = null
 
 [node name="world_boundary" type="StaticBody2D" parent="." unique_id=1102680152]
 
