@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @export var mirror : int
 
+var kiss = 0
 var speed = 50
 var direction = Vector2 (0,0)
 
@@ -73,3 +74,15 @@ func jump():
 	else:
 		jump_timer -= 1
 	direction.y = -3
+
+
+
+
+func _on_detection_body_entered(body: Node2D) -> void:
+	if body.name.contains("Player"):
+		kiss += 1
+		print("kiss ", kiss)
+		if kiss >= 2:
+			#play animation
+			#switch level
+			pass
